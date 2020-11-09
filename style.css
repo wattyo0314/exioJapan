@@ -1,0 +1,322 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", osaka, monospace;
+  position: relative;
+}
+
+body {
+  min-width: 320px;
+  height: 100vh;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+}
+
+body .header {
+  margin: 0 auto;
+  background-color: #af1653;
+}
+
+body .header .header__inner {
+  margin: 0 auto;
+  width: 1200px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .header .header__inner h1 {
+  font-size: 0.6rem;
+  line-height: 20px;
+  padding: 5px 0;
+  color: #fff;
+}
+
+body .header .header__inner .sp {
+  display: none;
+}
+
+body .header .header__main {
+  background-color: #fff;
+}
+
+body .header .header__main .header__inner__tel {
+  min-width: 255px;
+  padding: 10px 0;
+  margin: 0 0 0 auto;
+  font-size: 14px;
+  text-align: center;
+}
+
+body .header .header__main .header__inner .phoneNumber {
+  background-image: url("img/icon_tel.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding: 0 0 0 40px;
+  background-size: contain;
+  font-size: 1.3rem;
+  color: #af1653;
+}
+
+body .header .header__main .header__inner .em {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 10px;
+}
+
+body .pgGray {
+  width: 100%;
+  height: 100%;
+  background-color: #f7f7f7;
+  width: auto;
+}
+
+body .pgGray .mainVisual {
+  height: 100%;
+  background-image: url("img/main.jpg");
+  background-size: cover;
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+body .pgGray .mainVisual .mainVisual__title {
+  height: 100%;
+  text-align: center;
+  color: #af1653;
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  width: 100%;
+  font-size: 1.5rem;
+  text-shadow: #fff 2px 2px 0px, #fff -2px 2px 0px, #fff 2px -2px 0px;
+}
+
+body .pgGray .mainVisual .mainVisual__title .mainVisual__text {
+  padding: 3% 0 0 0;
+  line-height: 2;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #af1653;
+  text-shadow: #fff 1px 1px 0px, #fff 1px 1px 0px, #fff 1px -1px 0px, #fff -1px -1px 0px;
+}
+
+body .pgGray .strong {
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 1;
+}
+
+body .pgWhite .catch {
+  text-align: center;
+  background-color: #af1653;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+body .pgWhite .catch__text {
+  padding: 2% 0;
+  text-align: center;
+}
+
+body .pgWhite .sp {
+  display: none;
+}
+
+body .bgGreen {
+  width: 100%;
+  height: 80%;
+  background-image: url("img/bg_green.jpg");
+  background-size: auto 100%;
+}
+
+body .bgGreen .photos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  margin: 0 25%;
+  padding: 2% 0;
+}
+
+body .bgGreen .photos .photo .img {
+  height: 50%;
+  width: 50%;
+}
+
+body .pgEvents {
+  padding: 30px 0 40px;
+  height: 120%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body .pgEvents .eventIntro {
+  background-image: url("img/bg_ribon.png");
+  background-size: 100% 100%;
+  height: 8%;
+  text-align: center;
+  line-height: 4rem;
+  font-size: 2rem;
+  color: #fff;
+}
+
+body .pgEvents .eventMessage {
+  margin-top: 3%;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+body .pgEvents .eventsBox {
+  height: 80%;
+  max-width: 960px;
+  text-align: center;
+  width: auto;
+  margin: 0 auto;
+}
+
+body .pgEvents .eventsBox .event1,
+body .pgEvents .eventsBox .event2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.8rem;
+}
+
+body .pgEvents .eventsBox .event1 .eventImg,
+body .pgEvents .eventsBox .event2 .eventImg {
+  width: 30%;
+}
+
+body .pgEvents .eventsBox .event1 .event__description,
+body .pgEvents .eventsBox .event2 .event__description {
+  position: absolute;
+  left: 25%;
+  top: 20%;
+  text-align: left;
+}
+
+body .pgEvents .eventsBox .event2 {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+body .workLocation {
+  width: 100%;
+  height: 70%;
+  background-image: url("img/bg_wine.png");
+}
+
+body .workLocation .midashi {
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+body .workLocation .workLocation__areas {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .workLocation .workLocation__areas .area {
+  width: 50%;
+}
+
+body .workLocation .workLocation__areas .area .schoolImg {
+  width: 50%;
+  margin: auto 25%;
+}
+
+body .workLocation .workLocation__areas .area .areaInfo {
+  margin: 0 25%;
+  color: #fff;
+}
+
+body .workLocation .workLocation__areas .area .areaInfo .areaInfo__name {
+  font-size: 1.1rem;
+}
+
+body .workLocation .workLocation__areas .area .areaInfo .areaInfo__name a {
+  text-decoration: none;
+  display: inline-block;
+  background-color: #fff;
+  padding: 0 5px;
+  border-radius: 5px;
+}
+
+body .QandA {
+  width: 100%;
+  height: 100%;
+  padding: 30px 0 40px;
+}
+
+body .QandA .QandA__title {
+  font-family: Times, serif;
+  text-align: center;
+  line-height: 4rem;
+  font-size: 2rem;
+  color: #af1653;
+}
+
+body .QandA dl {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+body .QandA dl dt {
+  background-color: #e7b9cb;
+  padding: 7px 10px 7px 40px;
+  position: relative;
+  min-height: 30px;
+  line-height: 30px;
+  font-size: 130%;
+  color: #af1653;
+}
+
+body .QandA dl dt::before {
+  content: "Q";
+  left: 10px;
+  position: absolute;
+}
+
+body .QandA dl dt::after {
+  content: "＋";
+  position: absolute;
+  right: 10px;
+  padding: 0 5px;
+  border: 1px solid #af1653;
+  border-radius: 50%;
+}
+
+body .QandA dl dt_minus::after {
+  content: "-";
+  position: absolute;
+  right: 10px;
+  padding: 0 5px;
+  border: 1px solid #af1653;
+  border-radius: 50%;
+  display: none;
+}
+
+body .QandA dl dd {
+  position: relative;
+  padding: 10px 10px 30px 40px;
+}
+/*# sourceMappingURL=style.css.map */

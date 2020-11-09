@@ -1,0 +1,319 @@
+* {
+  box-sizing: border-box;
+  // line-height: 1.8;
+  font-family: "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", osaka, monospace;
+  // min-width: 320px;
+  // height: 100%;
+  position: relative;
+}
+
+@mixin sp {
+  display: none;
+}
+
+@mixin english {
+  font-family: Times, serif;
+}
+
+@mixin em {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 10px;
+}
+
+@mixin section {
+  width: 100%;
+  // margin: 0 auto 20;
+  height: 100%;
+}
+
+@mixin block {
+  width: auto;
+  // padding: 30px 0 40px;
+}
+
+@mixin justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin mainVisualText {
+  text-align: center;
+  color: #af1653;
+}
+
+@mixin h3 {
+  text-align: center;
+  line-height: 4rem;
+  font-size: 2rem;
+}
+
+body {
+  min-width: 320px;
+  height: 100vh;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+
+  .header {
+    margin: 0 auto;
+    background-color: #af1653;
+    .header__inner {
+      margin: 0 auto;
+      width: 1200px;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      h1 {
+        font-size: 0.6rem;
+        line-height: 20px;
+        padding: 5px 0;
+        color: #fff;
+      }
+      .sp {
+        @include sp;
+      }
+    }
+    .header__main {
+      background-color: #fff;
+      .header__inner {
+        &__tel {
+          min-width: 255px;
+          padding: 10px 0;
+          margin: 0 0 0 auto;
+          font-size: 14px;
+          text-align: center;
+        }
+        .phoneNumber {
+          background-image: url("img/icon_tel.png");
+          background-position: left center;
+          background-repeat: no-repeat;
+          padding: 0 0 0 40px;
+          background-size: contain;
+          font-size: 1.3rem;
+          color: #af1653;
+        }
+        .em {
+          @include em;
+        }
+      }
+    }
+  }
+  // メインコンテンツ //
+  .pgGray {
+    width: 100%;
+    height: 100%;
+    background-color: #f7f7f7;
+    @include block;
+    .mainVisual {
+      height: 100%;
+      background-image: url("img/main.jpg");
+      background-size: cover;
+      width: 90%;
+      max-width: 1600px;
+      margin: 0 auto;
+      .mainVisual__title {
+        height: 100%;
+        @include mainVisualText;
+        position: absolute;
+        top: 40%;
+        left: 0%;
+        width: 100%;
+        font-size: 1.5rem;
+        text-shadow: #fff 2px 2px 0px, #fff -2px 2px 0px, #fff 2px -2px 0px;
+        .mainVisual__text {
+          padding: 3% 0 0 0;
+          line-height: 2;
+          font-size: 1.2rem;
+          @include mainVisualText;
+          text-shadow: #fff 1px 1px 0px, #fff 1px 1px 0px, #fff 1px -1px 0px,
+            #fff -1px -1px 0px;
+        }
+      }
+    }
+    .strong {
+      font-weight: bold;
+      font-size: 60px;
+      line-height: 1;
+    }
+    // ギザギザ
+    // .mainVisual::after {
+    //   content: "";
+    //   background-color: #f7f7f7;
+    //   position: absolute;
+    //   background-size: 30px 30px;
+    //   height: 14px;
+    //   width: 100%;
+    //   bottom: 0;
+    // }
+  }
+  // キャッチコピー
+  .pgWhite {
+    .catch {
+      text-align: center;
+      background-color: #af1653;
+      font-size: 2.5rem;
+      color: #fff;
+    }
+    .catch__text {
+      padding: 2% 0;
+      text-align: center;
+    }
+    .sp {
+      @include sp;
+    }
+  }
+  // 写真一覧
+  .bgGreen {
+    width: 100%;
+    height: 80%;
+    background-image: url("img/bg_green.jpg");
+    background-size: auto 100%;
+    .photos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 0 25%;
+      padding: 2% 0;
+      .photo {
+        .img {
+          height: 50%;
+          width: 50%;
+        }
+      }
+    }
+  }
+  .pgEvents {
+    padding: 30px 0 40px;
+    height: 120%;
+    max-width: 960px;
+    margin: 0 auto;
+    .eventIntro {
+      background-image: url("img/bg_ribon.png");
+      background-size: 100% 100%;
+      height: 8%;
+      text-align: center;
+      line-height: 4rem;
+      font-size: 2rem;
+      color: #fff;
+    }
+    .eventMessage {
+      margin-top: 3%;
+      text-align: center;
+      font-size: 1.4rem;
+    }
+    .eventsBox {
+      height: 80%;
+      max-width: 960px;
+      text-align: center;
+      width: auto;
+      margin: 0 auto;
+      .event1,
+      .event2 {
+        display: flex;
+        align-items: center;
+        font-size: 0.8rem;
+        .eventImg {
+          width: 30%;
+        }
+        .event__description {
+          position: absolute;
+          left: 25%;
+          top: 20%;
+          text-align: left;
+        }
+      }
+      .event2 {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+  .workLocation {
+    width: 100%;
+    height: 70%;
+    background-image: url("img/bg_wine.png");
+    .midashi {
+      font-size: 2rem;
+      text-align: center;
+      color: #fff;
+    }
+    .workLocation__areas {
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      .area {
+        width: 50%;
+        .schoolImg {
+          width: 50%;
+          margin: auto 25%;
+        }
+        .areaInfo {
+          margin: 0 25%;
+          color: #fff;
+          .areaInfo__name {
+            font-size: 1.1rem;
+          }
+          .areaInfo__name a {
+            text-decoration: none;
+            display: inline-block;
+            background-color: #fff;
+            padding: 0 5px;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+  .QandA {
+    width: 100%;
+    height: 100%;
+    padding: 30px 0 40px;
+    .QandA__title {
+      @include english;
+      @include h3;
+      color: #af1653;
+    }
+    dl {
+      max-width: 900px;
+      margin: 0 auto;
+      dt {
+        background-color: #e7b9cb;
+        padding: 7px 10px 7px 40px;
+        position: relative;
+        min-height: 30px;
+        line-height: 30px;
+        font-size: 130%;
+        color: #af1653;
+      }
+      dt::before {
+        content: "Q";
+        left: 10px;
+        position: absolute;
+      }
+      dt::after {
+        content: "＋";
+        position: absolute;
+        right: 10px;
+        padding: 0 5px;
+        border: 1px solid #af1653;
+        border-radius: 50%;
+      }
+      dt_minus::after {
+        content: "-";
+        position: absolute;
+        right: 10px;
+        padding: 0 5px;
+        border: 1px solid #af1653;
+        border-radius: 50%;
+        display: none;
+      }
+      dd {
+        position: relative;
+        padding: 10px 10px 30px 40px;
+        // display: none;
+      }
+    }
+  }
+  .recruitment {
+  }
+}
